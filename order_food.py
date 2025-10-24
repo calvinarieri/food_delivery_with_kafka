@@ -15,7 +15,7 @@ order = {
     "order_id": "1234",
     "user": 98,
     "order": "Chapati + beans",
-    "quantity":[4,6]
+    "quantity":[4,6, 8]
 }
 
 # 1. Covert dictionary to a json string => to bytes kafka can understand(encode)
