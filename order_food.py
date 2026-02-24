@@ -12,7 +12,7 @@ def message_delivery(error, msg):
         print(msg.partition())
 
 order = {
-    "order_id": "1234",
+    "order_id": "1264",
     "user": 98,
     "order": "Chapati + beans",
     "quantity":[4,6, 8]
@@ -21,8 +21,8 @@ order = {
 # 1. Covert dictionary to a json string => to bytes kafka can understand(encode)
 value = json.dumps(order).encode('utf-8')
 value = producer.produce(
-    topic='food-bought',
+    topic='otp-request',
       value=value,
       callback=message_delivery
-      )
+    )
 producer.flush()
